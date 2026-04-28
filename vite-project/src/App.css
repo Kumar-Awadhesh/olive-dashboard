@@ -95,3 +95,87 @@
 .shop-tag-container>h4:last-child{
   margin-top: -40px;
 }
+
+.olive-para{
+  width: 35%;
+  margin: auto;
+  color: rgb(124, 132, 108);
+  margin-top: 20px;
+  text-align: center;
+  font-size: larger;
+  border: 1px solid;
+}
+
+.mobile-container{
+  width: 280px;
+  height: 530px;
+  margin: auto;
+  margin-top: 40px;
+  background-color: white;
+  border-radius: 40px;
+  border: 10px solid lightgrey;
+}
+
+.camera-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 35%;
+  height: 25px;
+  margin: auto;
+  margin-top: 12px;
+  border-radius: 50px;
+  background-color: black;
+}
+
+.camera-container>div{
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid rgb(38, 38, 38);
+}
+
+.downloadBtn-container{
+  width: max-content;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.downloadBtn-container>button{
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: large;
+  background-color: transparent;
+}
+
+.downloadBtn-container>button:first-child{
+  color: white;
+  border-radius: 25px;
+  background-color: rgb(45, 59, 16);
+}
+
+.mobile-grocery-container{
+  overflow: hidden;
+  width: 40%;
+  margin: auto;
+  overflow: hidden;
+  border: 1px solid;
+}
+
+.product-img-container{
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.product-img{
+  width: 120px;
+  opacity: 0.2;
+}
+
+.main-product-img{
+  width: 150px;
+}
+
+
