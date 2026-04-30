@@ -5,29 +5,13 @@ import { DashboardContext } from "../contexts/dashboardContext";
 
 export const Dashboard = () => {
 
-    const { navbarBtn, setNavbarbtn, downloadBtn, setDownloadBtn } = useContext(DashboardContext);
-    const [image, setImage] = useState(0);
-
-
-    const images = [
-        "/images/product.webp",
-        "/images/product.webp",
-        "/images/product.webp",
-        "/images/product.webp",
-        "/images/product.webp"
-    ]
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setImage((prev) => (prev + 1) % images.length)
-        }, 5000)
-        return () => clearInterval(interval);
-    }, [])
+    const { showProduct, setShowProduct } = useContext(DashboardContext);
+    
 
 
     return (
         <>
-            <main className="main-Container">
+            <main className="main-container">
                 <nav className="navbar">
                     <div className="logo-container"><img src="/images/olive-logo.png" alt="olive-logo" /></div>
                     <div className="nav-btn-container">
@@ -40,7 +24,7 @@ export const Dashboard = () => {
                     </div>
                     <div className="signin-btn-container">
                         <p>Sign in</p>
-                        <p>Get Olive -</p>
+                        <p>Get Olive</p>
                     </div>
                 </nav>
                 <div className="user-card">
@@ -69,15 +53,123 @@ export const Dashboard = () => {
                             <div></div>
                         </div>
                         <div className="grocery-container">
-                            <div className="product-img-container"
-                                style={{ transform: `translateX(-${image * 100}px)` }}
-                            >
-                                {
-                                    images.map((img, index) => (
-                                        <img className={index-2 === image ? "main-product-img" : "product-img" } key={index} src={img} />
-                                    ))
-                                }
+
+                            <div>
+                                <div className="product-img-container"><img src="/images/product.webp" alt="product-img" /></div>
+                                <div className="product-info-container">
+                                    <img src="/images/product.webp" alt="product-img" />
+                                    <h4>Larabar ChocolateChip Cookie Fruit & Nut</h4>
+                                </div>
+                                <div className="product-para-container">
+                                    <p className="rating">
+                                        92/100 <br />
+                                        Excellent
+                                    </p>
+                                    <p>Oliver Says:</p>
+                                    <p>
+                                        "This product, which includes ingredients like cashews and dates,
+                                        scored well mainly because it doesn't contain processed sugars,
+                                        harmful additives, or seed oils, making it a healthier choice for your family,
+                                        especially as an occasional treat. The slight deduction for processing indicates
+                                        it's not entirely raw, but it's still a good option that aligns with your goals
+                                        of avoiding overly processed foods."
+
+                                    </p>
+                                </div>
                             </div>
+                            <div>
+                                <div className="product-img-container"><img src="/images/product.webp" alt="product-img" /></div>
+                                <div className="product-info-container">
+                                    <img src="/images/product.webp" alt="product-img" />
+                                    <h4>Larabar ChocolateChip Cookie Fruit & Nut</h4>
+                                </div>
+                                <div className="product-para-container">
+                                    <p className="rating">
+                                        92/100 <br />
+                                        Excellent
+                                    </p>
+                                    <p>Oliver Says:</p>
+                                    <p>
+                                        "This product, which includes ingredients like cashews and dates,
+                                        scored well mainly because it doesn't contain processed sugars,
+                                        harmful additives, or seed oils, making it a healthier choice for your family,
+                                        especially as an occasional treat. The slight deduction for processing indicates
+                                        it's not entirely raw, but it's still a good option that aligns with your goals
+                                        of avoiding overly processed foods."
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="product-img-container"><img className="middle-img" src="/images/product.webp" alt="product-img" /></div>
+                                <div className={ showProduct ? "middle-info-container" : "product-info-container" }>
+                                    <img src="/images/product.webp" alt="product-img" />
+                                    <h4>Larabar ChocolateChip Cookie Fruit & Nut</h4>
+                                </div>
+                                <div className = { showProduct ? "highlight" : "product-img-container" }>
+                                    <p className="rating">
+                                        92/100 <br />
+                                        Excellent
+                                    </p>
+                                    <p>Oliver Says:</p>
+                                    <p>
+                                        "This product, which includes ingredients like cashews and dates,
+                                        scored well mainly because it doesn't contain processed sugars,
+                                        harmful additives, or seed oils, making it a healthier choice for your family,
+                                        especially as an occasional treat. The slight deduction for processing indicates
+                                        it's not entirely raw, but it's still a good option that aligns with your goals
+                                        of avoiding overly processed foods."
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="product-img-container"><img src="/images/product.webp" alt="product-img" /></div>
+                                <div className="product-info-container">
+                                    <img src="/images/product.webp" alt="product-img" />
+                                    <h4>Larabar ChocolateChip Cookie Fruit & Nut</h4>
+                                </div>
+                                <div className="product-para-container">
+                                    <p className="rating">
+                                        92/100 <br />
+                                        Excellent
+                                    </p>
+                                    <p>Oliver Says:</p>
+                                    <p>
+                                        "This product, which includes ingredients like cashews and dates,
+                                        scored well mainly because it doesn't contain processed sugars,
+                                        harmful additives, or seed oils, making it a healthier choice for your family,
+                                        especially as an occasional treat. The slight deduction for processing indicates
+                                        it's not entirely raw, but it's still a good option that aligns with your goals
+                                        of avoiding overly processed foods."
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="product-img-container"><img src="/images/product.webp" alt="product-img" /></div>
+                                <div className="product-info-container">
+                                    <img src="/images/product.webp" alt="product-img" />
+                                    <h4>Larabar ChocolateChip Cookie Fruit & Nut</h4>
+                                </div>
+                                <div className="product-para-container">
+                                    <p className="rating">
+                                        92/100 <br />
+                                        Excellent
+                                    </p>
+                                    <p>Oliver Says:</p>
+                                    <p>
+                                        "This product, which includes ingredients like cashews and dates,
+                                        scored well mainly because it doesn't contain processed sugars,
+                                        harmful additives, or seed oils, making it a healthier choice for your family,
+                                        especially as an occasional treat. The slight deduction for processing indicates
+                                        it's not entirely raw, but it's still a good option that aligns with your goals
+                                        of avoiding overly processed foods."
+
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

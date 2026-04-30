@@ -1,13 +1,15 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 
 export const DashboardContext = createContext();
 
-export const ContextProvider = ({children}) => {
-    const [navbarBtn, setNavbarBtn] = useState(false);
-    const [downloadBtn, setDownloadBtn] = useState(false);
+export const ContextProvider = ({ children }) => {
+    const [showProduct, setShowProduct] = useState(true);
+  
 
-    return(
-        <DashboardContext.Provider value={{navbarBtn, setNavbarBtn, downloadBtn, setDownloadBtn}}>{children}</DashboardContext.Provider>
+
+
+    return (
+        <DashboardContext.Provider value={{ showProduct, setShowProduct }}>{children}</DashboardContext.Provider>
     )
 }
