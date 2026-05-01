@@ -34,7 +34,8 @@
 
 .nav-btn-container>p:hover{
   cursor: pointer;
-  background-color: rgb(231, 230, 230);
+  border-radius: 5px;
+  background-color: rgb(234, 240, 229);
  
 }
 
@@ -187,7 +188,7 @@
 }
 
 .product-img-container .middle-img{
-  width: 115px;
+  width: 125px;
   opacity: 1;
 }
 
@@ -222,13 +223,18 @@
 .rating{
   width: max-content;
   margin: auto;
-  margin-top: -10px;
+  margin-top: -20px;
 }
 
 .middle-info-container{
   display: flex;
   width: 240px;
  
+}
+
+.highlight{
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .highlight>p{

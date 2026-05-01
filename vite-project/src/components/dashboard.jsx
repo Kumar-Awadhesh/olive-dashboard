@@ -6,7 +6,7 @@ import { DashboardContext } from "../contexts/dashboardContext";
 export const Dashboard = () => {
 
     const { showProduct, setShowProduct } = useContext(DashboardContext);
-    
+
 
 
     return (
@@ -15,12 +15,12 @@ export const Dashboard = () => {
                 <nav className="navbar">
                     <div className="logo-container"><img src="/images/olive-logo.png" alt="olive-logo" /></div>
                     <div className="nav-btn-container">
-                        <p>Solutions v</p>
+                        <p>Solutions </p>
                         <p>Features</p>
                         <p>Pricing</p>
-                        <p>Blog v</p>
+                        <p>Blog </p>
                         <p>Restaurants</p>
-                        <p>Food v</p>
+                        <p>Food </p>
                     </div>
                     <div className="signin-btn-container">
                         <p>Sign in</p>
@@ -102,15 +102,15 @@ export const Dashboard = () => {
                             </div>
                             <div>
                                 <div className="product-img-container"><img className="middle-img" src="/images/product.webp" alt="product-img" /></div>
-                                <div className={ showProduct ? "middle-info-container" : "product-info-container" }>
+                                <div className={showProduct ? "middle-info-container" : "product-info-container"}>
                                     <img src="/images/product.webp" alt="product-img" />
                                     <h4>Larabar ChocolateChip Cookie Fruit & Nut</h4>
                                 </div>
-                                <div className = { showProduct ? "highlight" : "product-img-container" }>
-                                    <p className="rating">
-                                        92/100 <br />
-                                        Excellent
-                                    </p>
+                                <p className="rating">
+                                    92/100 <br />
+                                    Excellent
+                                </p>
+                                <div className={showProduct ? "highlight" : "product-img-container"}>
                                     <p>Oliver Says:</p>
                                     <p>
                                         "This product, which includes ingredients like cashews and dates,
